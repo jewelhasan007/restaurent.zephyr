@@ -17,6 +17,7 @@ import {
   Users,
   Calendar,
   Check,
+  Mail,
 } from 'lucide-react';
 
 const HERO_IMAGE = 'https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=1920';
@@ -27,12 +28,19 @@ const CANDLE_IMAGE = 'https://images.pexels.com/photos/37968303/pexels-photo-379
 const BAR_IMAGE = 'https://images.pexels.com/photos/26626726/pexels-photo-26626726.jpeg?auto=compress&cs=tinysrgb&w=1920';
 
 const GALLERY_IMAGES = [
-  { url: 'https://images.pexels.com/photos/17057025/pexels-photo-17057025.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Table Setting' },
-  { url: 'https://images.pexels.com/photos/10445927/pexels-photo-10445927.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Festive Dining' },
-  { url: 'https://images.pexels.com/photos/12181763/pexels-photo-12181763.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Wine Selection' },
-  { url: 'https://images.pexels.com/photos/3926205/pexels-photo-3926205.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'The Experience' },
-  { url: 'https://images.pexels.com/photos/22891887/pexels-photo-22891887.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Lounge Bar' },
-  { url: 'https://images.pexels.com/photos/7708507/pexels-photo-7708507.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Signature Cocktails' },
+  { url: '/1.png', label: 'Table Setting' },
+  { url: '/2.png', label: 'Festive Dining' },
+  { url: '/3.png', label: 'Wine Selection' },
+  { url: '/4.png', label: 'The Experience' },
+  { url: '/5.png', label: 'Lounge Bar' },
+  { url: '/6.png', label: 'Signature Cocktails' },
+  { url: '/7.png', label: 'Fine Dining' },
+  { url: '/8.png', label: 'Chef Special' },
+  { url: '/9.png', label: 'Restaurant Interior' },
+  { url: '/10.png', label: 'Elegant Atmosphere' },
+  { url: '/11.png', label: 'Private Dining' },
+  { url: '/12.png', label: 'Dessert Selection' },
+  { url: '/13.png', label: 'Dining Experience' },
 ];
 
 type MenuCategory = 'starters' | 'mains' | 'desserts' | 'drinks';
@@ -114,10 +122,13 @@ function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 group">
-          <Sparkles className="w-6 h-6 text-gold group-hover:rotate-12 transition-transform duration-300" />
-          <span className="font-serif text-2xl tracking-wide text-cream">Zephyr</span>
-        </a>
+<a href="#home" className="flex items-center group">
+  <img
+    src="/logo.png"
+    alt="Zephyr Logo"
+    className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
+  />
+</a>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
@@ -495,7 +506,7 @@ function Contact() {
 
   const contactInfo = [
     { icon: MapPin, label: 'Location', value: 'Catharsis Tower, House-133, Road-12, Block-E, Banani Model Town, Dhaka, Bangladesh 1213' },
-    { icon: Phone, label: 'Reservations', value: '+880 1XXX-XXXXXX' },
+    { icon: Phone, label: 'Reservations', value: '+880 1321-197337' },
     { icon: Clock, label: 'Hours', value: 'Mon–Sun: 12:00 PM – 11:30 PM' },
   ];
 
@@ -608,20 +619,32 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-gold" />
-              <span className="font-serif text-2xl text-cream">Zephyr</span>
+              <a href="#home" className="flex items-center group">
+  <img
+    src="/logo.png"
+    alt="Zephyr Logo"
+    className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
+  />
+</a>
             </div>
             <p className="text-cream/50 text-sm leading-relaxed max-w-md mb-6">
               A beautiful place to admire exquisite continental dishes with a
               panoramic view of the beautiful side of Dhaka City.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 border border-gold/20 rounded-sm flex items-center justify-center text-gold/60 hover:text-gold hover:border-gold transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/zephyr_dhaka/" target="_blank" className="w-10 h-10 border border-gold/20 rounded-sm flex items-center justify-center text-gold/60 hover:text-gold hover:border-gold transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 border border-gold/20 rounded-sm flex items-center justify-center text-gold/60 hover:text-gold hover:border-gold transition-colors" aria-label="Facebook">
+              <a href="https://web.facebook.com/zephyr.restaurant.lounge" target="_blank" className="w-10 h-10 border border-gold/20 rounded-sm flex items-center justify-center text-gold/60 hover:text-gold hover:border-gold transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
+             <a
+  href="mailto:zephyrlounge12@gmail.com"
+  className="w-10 h-10 border border-gold/20 rounded-sm flex items-center justify-center text-gold/60 hover:text-gold hover:border-gold transition-colors"
+  aria-label="Email"
+>
+  <Mail className="w-5 h-5" />
+</a>
             </div>
           </div>
 
@@ -643,7 +666,7 @@ function Footer() {
               Road-12, Block-E, Banani<br />
               Model Town, Dhaka 1213
             </p>
-            <p className="text-cream/50 text-sm">+880 1XXX-XXXXXX</p>
+            <p className="text-cream/50 text-sm">+880 1321-197337</p>
             <p className="text-gold text-sm mt-2">Mon–Sun: 12 PM – 11:30 PM</p>
           </div>
         </div>
